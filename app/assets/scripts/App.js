@@ -1,5 +1,14 @@
 // importing all the css
 import '../styles/styles.css';
+// for images
+import 'lazysizes';
+
+
+// import js files here 
+import MobileMenu from './modules/MobileMenu';
+
+// executing class
+new MobileMenu();
 
 
 // importing react
