@@ -1,7 +1,5 @@
 *, *::after, *::before {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -9,7 +7,8 @@ html {
 }
 
 body {
-    font-size: 62.5%;
+    font-family: 'Roboto';
+    color: #333;
 }
 
 img {
@@ -17,10 +16,6 @@ img {
     height: auto;
 }
 
-ul , li {
-    list-style: none;
-}
-
 a {
-    text-decoration: none;
+    color: $mainOrange;
 }

@@ -1,23 +1,30 @@
-// importing all the css
 import '../styles/styles.css';
-// for images
 import 'lazysizes';
 
+// import ClientArea from './modules/ClientArea';
 
-// import js files here 
-import MobileMenu from './modules/MobileMenu';
+// React related code
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 
-// executing class
-new MobileMenu();
+// import created react components
+// import MyAmazingComponent from './modules/MyAmazingComponent'
 
-
-// importing react
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-// import created react components an example
-// import ExampleComponent from './modules/ExampleComponent';
-
-// ReactDOM.render(<ExampleComponent />, document.querySelector('element'))
+// ReactDOM.render(<MyAmazingComponent />, document.querySelector('#react-example'))
 
 
+new ClientArea();
+
+
+// inheritance
+// class Adult extends Person {
+//     payTaxes () {
+//         console.log(`${this.name} has to pay taxes now!`)
+//     }
+// }
+// const bob = new Person('Bob', 'purple');
+// bob.greet();
+
+// const jan = new Adult('Jan', 'orange');
+// jan.greet();
+// jan.payTaxes();
