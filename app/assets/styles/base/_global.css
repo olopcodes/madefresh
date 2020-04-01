@@ -1,5 +1,7 @@
 *, *::after, *::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -7,7 +9,6 @@ html {
 }
 
 body {
-    background-color: rgb(102, 148, 104);
     color: #333;
 }
 
@@ -16,6 +17,10 @@ img {
     height: auto;
 }
 
+ul, li {
+    list-style: none;
+}
+
 a {
-    color: $mainOrange;
+    text-decoration: none;;
 }

@@ -1,5 +1,9 @@
 import '../styles/styles.css';
+// to add jquery to your js file do this
+import $ from 'jquery';
+// this is for images
 import 'lazysizes';
+
 
 // import ClientArea from './modules/ClientArea';
 
