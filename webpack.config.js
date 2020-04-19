@@ -1,4 +1,5 @@
-const currentTask = process.env.npm_lifecycle_event
+// this will change based on whether you run npm run dev npm run build
+const currentTask = process.env.npm_lifecycle_event;
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MinifyCss = require('mini-css-extract-plugin');
@@ -86,12 +87,14 @@ if(currentTask == 'dev') {
         contentBase: path.join(__dirname, 'app'),
         // allows reload
         hot: true,
+        // show errors in browser
+        overlay: true,
         // localhost
         port: 3000,
         host: '0.0.0.0'
     };
 
-    config,mode = 'development';
+    config.mode = 'development';
 }
 
 
