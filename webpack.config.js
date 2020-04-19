@@ -95,12 +95,15 @@ if(currentTask == 'dev') {
     };
 
     config.mode = 'development';
+
+    // for viewing errors also check 
+    // if it causes problems
+    config.devtool = 'eval-source-map';
 }
 
 
 // when you run npm build to publish a site this will happen
 if(currentTask == 'build') {
-    
 
     cssConfig.use.unshift(MinifyCss.loader);
     postCssPlugins.push(require('cssnano'));
@@ -113,6 +116,8 @@ if(currentTask == 'build') {
     };
 
     config.mode = 'production';
+
+    config.devtool = 'source-map';
 
     config.optimization = {
         splitChunks: {chunks: 'all'}
