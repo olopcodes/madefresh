@@ -6,6 +6,7 @@ const MinifyCss = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
 
+
 const postCssPlugins = [
     require('postcss-import'),
     require('postcss-mixins'),
@@ -15,14 +16,18 @@ const postCssPlugins = [
     require('autoprefixer')
 ];
 
+// for images
 class RunAfterCompile {
     apply(compiler) {
       compiler.hooks.done.tap('Copy images', function() {
+        // where the images are from, where the images will output
         fse.copySync('./app/assets/images', './docs/assets/images')
       })
     }
   }
 
+
+// main css config file
 let cssConfig = {
     // webpack look for css files
     test: /\.css$/i,
@@ -46,6 +51,7 @@ let pages = fse.readdirSync('./app').filter(function(file) {
     })
   })
 
+// main config for both production and dev
 let config = {
     // where webpack looks initially
     entry: './app/assets/scripts/App.js',
@@ -128,7 +134,7 @@ if(currentTask == 'build') {
         new MinifyCss({
             filename: 'styles.[chunkhash].css'
             }),
-        new RunAfterCompile()         
+        new RunAfterCompile()    
         );
 }
 
