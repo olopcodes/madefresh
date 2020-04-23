@@ -6,10 +6,18 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
-    color: #333;
+    color: $font;
+    background-color: $white;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+    font-family: 'Halant', serif;
 }
 
 img {

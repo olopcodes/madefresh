@@ -1,0 +1,57 @@
+.text {
+
+    /*links and icon styles*/
+    &__link, &__icon {
+        position: relative;
+        font-size: 1.6rem;
+        color: $font;
+        margin: 0 .5rem;
+        display: block;
+        padding: 1rem 1.5rem;
+        transition: .4s;
+        cursor: pointer;
+
+        @mixin atLarge {
+            margin: 0 1rem;
+            padding: 1.3rem 1.8rem;
+        }
+    }
+
+    &__link, &__icon {
+        @mixin atXLarge {
+            font-size: 2rem;
+        }
+    }
+
+    &__link::after, &__link::before {
+        @mixin atLarge {
+            content: '';
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $primary;
+            transform: scale(0);
+            transition: .3s;
+            transform-origin: left;
+        }
+        
+    }
+
+    &__link::before {
+        top: 0;
+        right: 0;
+        transform-origin: right;
+    }
+
+    &__link:hover::after,
+    &__link:hover::before {
+        transform: scale(1);
+    }
+
+    &__icon:hover {
+        background-color: $font-light;
+        color: $primary;
+    }
+}

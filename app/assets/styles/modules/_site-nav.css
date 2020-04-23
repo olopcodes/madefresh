@@ -1,0 +1,105 @@
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border: 3px solid red;
+    background-color: $white;
+    overflow: hidden;
+    height: 9rem;
+   
+    /* animate this on scroll
+    
+    animate this men menu clicked
+    background-color: $font-light;
+    */
+
+    @mixin atSmall {
+        border-color: green;
+    }
+
+    @mixin atMedium {
+        border-color: blue;
+    }
+    
+    @mixin atLarge {
+        border-color: purple;
+    }
+
+    &__logo-box {
+        width: 16rem;
+        height: 7rem;
+        background: url('../assets/imgs/logo-imgs/logo.png') no-repeat center;
+        background-size: cover;
+        cursor: pointer;
+        @mixin atLarge {
+            width: 20rem;
+            height: 8rem;
+        }
+    }
+
+    &__main-nav{
+        border: 2px solid chocolate;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        transform: scaleY(0);
+        transition: .3s;
+
+        /* this will be added with click
+        height: 25rem;
+        transform: scaleY(1);
+        */
+
+        @mixin atMedium {
+            align-items: center;    
+        }
+
+        @mixin atLarge {
+            height: auto;
+            width: 77rem;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @mixin atXLarge {
+            width: 90rem;
+        }
+    }
+
+    &__menu-icon {
+        
+        font-size: 3rem;
+        text-align: right;
+        color: $font;
+        cursor: pointer;
+        /* animate this on scroll
+        color: $white;
+        
+        */
+
+        @mixin atLarge {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @mixin atLarge {
+            flex-direction: row;
+            width: auto;
+        }
+    }
+
+    &__socials {
+        display: flex;
+    }
+
+    
+}
