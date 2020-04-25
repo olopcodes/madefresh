@@ -3,11 +3,6 @@
     padding: 0 1rem;
     max-width: 120rem;
 
-    &--section {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-    }
-
     &--site-nav{
         display: flex;
         justify-content: space-between;

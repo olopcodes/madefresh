@@ -1,0 +1,56 @@
+.btn {
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: .8rem 1.2rem;
+    transition: .3s;
+    color: $font;
+    position: relative;
+    z-index: 5;
+
+    @mixin atLarge {
+        font-size: 1.6rem;
+        padding: 1.2rem 1.6rem;
+    }
+
+    &--fill {
+        color: $font-light;
+        border-bottom: 2px solid $primary;
+        width: 11rem;
+        text-align: center;
+        &:hover{
+            color: $white;
+        } 
+
+        @mixin atLarge {
+            width: 14rem;
+        }
+    }
+
+    &--fill:hover::after {
+        transform: scaleY(1);
+        
+    }
+
+    &--fill::after {
+        content: '';
+        background-color: $primary;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleY(0);
+        transition: .3s;
+        z-index: -1;
+        transform-origin: bottom;
+    }
+
+    /* modifiers */
+
+    /* this will work when parent is set to flex column*/
+    &--align-right{
+        align-self: flex-end;
+    }
+
+}

@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 10000;
     padding: 1rem 0;
     border: 3px solid red;
     background-color: $white;

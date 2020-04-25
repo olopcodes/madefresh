@@ -1,0 +1,16 @@
+.page-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    &--flex-col-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        @mixin atLarge {
+            flex-direction: row;
+        }
+    }
+
+
+}

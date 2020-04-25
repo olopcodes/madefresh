@@ -1,9 +1,40 @@
 .text {
+    /* heading styles */
+    &__heading {
+        font-size: 3.5rem;
+        color: $font;
+
+        @mixin atLarge {
+            font-size: 4.5rem;
+        }
+    }
+
+    /* regular text styles*/
+    &__normal {
+        font-size: 1.4rem;
+    }
+
+    &__normal--italic{
+        font-style: italic;
+        font-size: 1.6rem;
+        @mixin atLarge {
+            font-size: 2rem;
+        }
+    }
+
+    /* modifiers*/
+    &--orange {
+        color: $primary;
+    }
+
+    &--center {
+        text-align: center;
+    }
 
     /*links and icon styles*/
     &__link, &__icon {
         position: relative;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         color: $font;
         margin: 0 .5rem;
         display: block;
@@ -14,6 +45,8 @@
         @mixin atLarge {
             margin: 0 1rem;
             padding: 1.3rem 1.8rem;
+            font-size: 1.6rem;
+
         }
     }
 
