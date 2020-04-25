@@ -1,50 +1,54 @@
 .hero {
-    background-color: $font-light;
-    height: 80rem;  
-    
+    padding-bottom: 0;
+    border-bottom: 2px solid $primary-light;
+
     @mixin atSmall {
-        height: 100rem;
+        height: 90rem;
+        background: red;
     }
 
     @mixin atLarge {
-        height: 62rem;
+        height: 55rem;
         overflow: hidden;
-        height: 120rem;
+        
     }
 
     &__left {
         order: 2;
+        position: relative;
+        height: 40rem;
+        background-color: $font-light;
+
+        @mixin atSmall {
+            height: 50rem;
+        }
 
         @mixin atLarge {
             order: 1;
             flex: 50%;
-            border: 2px solid red;
         }
     }
 
     &__left__overlay {
         width: 20rem;
         height: 20rem;
-        position: relative;
+        position: absolute;
+        top: 12%;
+        left: 12%;
+        
         z-index: 2;
-        top: 2rem;
         /* dashed border */
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='orange' stroke-width='8' stroke-dasharray='14%2c 28%2c 30%2c 12' stroke-dashoffset='13' stroke-linecap='square'/%3e%3c/svg%3e");
         @mixin atSmall {
-            height: 25rem;
             width: 25rem;
-            left: 10rem;
-            top: 5rem;
-        }
-
-        @mixin atMedium {
-            margin: 0 auto;
+            height: 25rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-75%,-75%);
         }
 
         @mixin atLarge {
-            margin: 0;
-            top: 10rem;
-            left: 7rem;
+            transform: translate(-75%,-80%);
         }
     }
 
@@ -52,50 +56,46 @@
         background-color: $white;
         height: 25rem;
         width: 25rem;
-        position: relative;
+        position: absolute;
+        top: 27%;
+        left: 31%;
         z-index: 3;
         padding: 2rem;
-        left: 7rem;
-        bottom: 15rem;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         @mixin atSmall {
             width: 30rem;
             height: 30rem;
-            left: 25rem;
-            top: -13rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%,-35%);
         }
+
         @mixin atLarge {
-            left: 18rem;
-            top: -7rem;
-            height: 30rem;
-            width: 30rem;
-            padding: 3rem;
+            transform: translate(-30%,-45%);
+            
         }
     }
 
     &__right {
         order: 1;
         height: 35rem;
-        background: url('../../assets/imgs/main/chef-1-small.jpeg') no-repeat center;
+        background: url('../../assets/imgs/main/food-12-med.jpeg') no-repeat center;
         background-size: cover;
 
         @mixin atSmall {
-            height: 45rem;
-            background: url('../../assets/imgs/main/food-12-med.jpeg') no-repeat center;
-            background-size: cover;
+            height: 40rem;
         }
 
         @mixin atMedium {
-            height: 50rem;
+            height: 45rem;
         }
 
         @mixin atLarge {
             order: 2;
             flex: 40%;
-            border: 3px solid orange;
-            height: 55rem;
+            height: 50rem;
         }
     }
 }

@@ -65,6 +65,7 @@
             width: 77rem;
             justify-content: space-between;
             flex-direction: row;
+            transform: scaleY(1);
         }
 
         @mixin atXLarge {
