@@ -1,6 +1,6 @@
 .hero {
     padding-bottom: 0;
-    border-bottom: 2px solid $primary-light;
+    border-bottom: 5px solid $primary-light;
 
     @mixin atSmall {
         height: 90rem;

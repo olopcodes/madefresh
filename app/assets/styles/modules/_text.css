@@ -50,11 +50,6 @@
         }
     }
 
-    &__link, &__icon {
-        @mixin atXLarge {
-            font-size: 2rem;
-        }
-    }
 
     &__link::after, &__link::before {
         @mixin atLarge {
