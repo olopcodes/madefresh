@@ -1,0 +1,81 @@
+.dish {
+    background-color: $font-light;
+    padding-bottom: 2rem;
+    &__wrapper {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
+        grid-gap: 1.5rem;
+    }
+
+    &__dish {
+        position: relative;
+        width: 35rem;
+        margin: 0 auto 33rem;
+
+        
+    }
+
+    &__background {
+        position: relative;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='orange' stroke-width='8' stroke-dasharray='14%2c 28%2c 30%2c 12' stroke-dashoffset='13' stroke-linecap='square'/%3e%3c/svg%3e");
+        height: 20rem;
+        width: 27rem;
+        
+    }
+
+    &__box {
+        
+        width: 30rem;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        height: 33rem;
+        overflow: hidden;
+        transition: .4s ease-in-out;
+    }
+
+    &__box:hover {
+        height: 45rem;
+    }
+
+    &__img-box {
+        height: 25rem;
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        
+        height: 20rem;
+        background-color: $white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__headline {
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__icon{
+        display: inline-block;
+        font-size: 1.4rem;
+        color: $primary;
+        
+    }
+
+    &__price {
+        font-size: 1.4rem;
+        display: inline-block;
+    }
+}

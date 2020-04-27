@@ -9,9 +9,15 @@
             font-size: 4.5rem;
         }
     }
+
+    &__heading--small {
+        font-size: 2.5rem;
+    }
+
     &__heading--line{
         padding-top: 1rem;
     }
+
     &__heading--line::before {
         content: '';
         position: absolute;
@@ -45,6 +51,14 @@
 
     &--center {
         text-align: center;
+    }
+
+    &--white {
+        color: $white;
+    }
+
+    &--small {
+        font-size: 1.15rem;
     }
 
     /*links and icon styles*/
