@@ -1,0 +1,77 @@
+.hype {
+    border-top: 1rem solid $primary;
+    border-bottom: 1rem solid $primary;
+
+    &__wrapper {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
+        grid-gap: 1.5rem;
+    }
+
+    &__review {
+        border-top: 5px solid $font-light;
+        border-right: 5px solid $primary-light;
+        border-left: 5px solid $font-light;
+        border-bottom: 5px solid $primary-light;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+        padding: 2rem;
+        width: 30rem;
+        margin: 3rem auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50rem;
+        @mixin atXLarge {
+            padding: 3rem;
+            height: 55rem;
+
+        }
+    }
+
+    &__img {
+        height: 20rem;
+        width: 20rem;
+        border: 2px solid $primary;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+        margin-bottom: 2rem;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__text h4{
+        position: relative;
+        display: inline-block;
+    }
+
+    &__text h4::after {
+        content: '';
+        height: 2px;
+        width: 25%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $font;
+    }
+
+
+
+    &__text p {
+        border-radius: 5px;
+        margin-top: 2rem;
+        background-color: $font-light;
+        padding: 1rem;
+        box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+
+        @mixin atXLarge {
+            padding: 2rem;
+            font-size: 1.6rem;
+        }
+    }
+}
