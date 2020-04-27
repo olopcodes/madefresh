@@ -1,16 +1,19 @@
 .hero {
     padding-bottom: 0;
-    border-bottom: 5px solid $primary-light;
+    
 
     @mixin atSmall {
-        height: 90rem;
+        height: 98rem;
         background: red;
     }
 
-    @mixin atLarge {
-        height: 55rem;
+    @mixin atMedium {
+        height: 103rem;
         overflow: hidden;
-        
+    }
+
+    @mixin atLarge {
+        height: 58rem;
     }
 
     &__left {

@@ -29,6 +29,10 @@
         border-color: purple;
     }
 
+    @mixin atXLarge {
+        border-color: yellow;
+    }
+
     &__logo-box {
         width: 16rem;
         height: 7rem;
@@ -42,7 +46,7 @@
     }
 
     &__main-nav{
-        border: 2px solid chocolate;
+        
         display: flex;
         flex-direction: column;
         width: 100%;

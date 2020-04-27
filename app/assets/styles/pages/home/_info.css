@@ -1,0 +1,122 @@
+.info {
+    border-top: 10px solid $primary-light;
+    border-bottom: 10px solid $primary-light;
+    position: relative;
+
+    &__wrapper {
+        @mixin atLarge {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        position: relative;
+        height: 40rem;
+        @mixin atSmall {
+            width: 40rem;
+            margin: 0 auto;
+        }
+
+        @mixin atMedium {
+            width: 50rem;
+        }
+    }
+
+    &__square1, &__square2 {
+        @mixin atSmall {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            background-color: $font;
+            transform: rotate(45deg);
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+        }
+
+        @mixin atMedium {
+            width: 10rem;
+            height: 10rem;
+        }
+        
+    }
+
+    &__square1 {
+        right: -5%;
+        top: -15%;
+        background-color: $primary-light;
+        @mixin atMedium {
+            right: -15%;
+        }
+    }
+
+    &__square2 {
+        bottom: -15%;
+        left: -5%;
+        background-color: $font-light;
+        @mixin atMedium {
+            left: -15%;
+        }
+
+        @mixin atLarge {
+            left: 0;
+        }
+    }
+
+    &__background {
+        width: 30rem;
+        height: 30rem;
+        background-color: rgba($font-light, .6);
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+        @mixin atMedium {
+            width: 35rem;
+            height: 35rem;
+        }
+
+    }
+
+    &__img-box{
+        width: 30rem;
+        height: 30rem;
+        border: 5px solid $primary;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+        @mixin atMedium {
+            width: 35rem;
+            height: 35rem;
+        }
+    }
+
+    &__right {
+        height: 40rem;
+        padding: 2.5rem;
+        @mixin atSmall {
+            margin-top: 10rem;
+            padding: 5rem;
+        }
+        @mixin atMedium {
+            width: 50rem;
+            height: 45rem;
+            margin: 0 auto;
+        }
+
+        @mixin atXLarge {
+            border-radius: 5px;
+            border: 5px solid $font;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    
+}

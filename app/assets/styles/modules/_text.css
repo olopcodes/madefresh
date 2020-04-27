@@ -3,15 +3,31 @@
     &__heading {
         font-size: 3.5rem;
         color: $font;
-
+        position: relative;
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
         @mixin atLarge {
             font-size: 4.5rem;
         }
+    }
+    &__heading--line{
+        padding-top: 1rem;
+    }
+    &__heading--line::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 25%;
+        background-color: $primary;
+        margin-bottom: 1rem;
+        
     }
 
     /* regular text styles*/
     &__normal {
         font-size: 1.4rem;
+        line-height: 1.3;
     }
 
     &__normal--italic{
@@ -39,12 +55,11 @@
         margin: 0 .5rem;
         display: block;
         padding: 1rem 1.5rem;
-        transition: .4s;
+        transition: .5s ease;
         cursor: pointer;
 
         @mixin atLarge {
-            margin: 0 1rem;
-            padding: 1.3rem 1.8rem;
+            
             font-size: 1.6rem;
 
         }
@@ -61,7 +76,7 @@
             left: 0;
             background-color: $primary;
             transform: scale(0);
-            transition: .3s;
+            transition: .5s ease-in-out;
             transform-origin: left;
         }
         

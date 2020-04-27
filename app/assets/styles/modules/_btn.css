@@ -3,51 +3,55 @@
     cursor: pointer;
     text-transform: uppercase;
     padding: .8rem 1.2rem;
-    transition: .3s;
+    transition: .5s ease-in-out;
     color: $font;
     position: relative;
     z-index: 5;
+    border: 2px solid $primary;
 
     @mixin atLarge {
         font-size: 1.6rem;
         padding: 1.2rem 1.6rem;
     }
 
-    &--fill {
-        color: $font-light;
-        border-bottom: 2px solid $primary;
-        width: 11rem;
-        text-align: center;
-        &:hover{
-            color: $white;
-        } 
-
-        @mixin atLarge {
-            width: 14rem;
-        }
-    }
-
-    &--fill:hover::after {
-        transform: scaleY(1);
-        
+    &--fill:hover {
+        color: $white;
+        border: 2px solid $font;
     }
 
     &--fill::after {
+        background: $font;
         content: '';
-        background-color: $primary;
-        height: 100%;
-        width: 100%;
         position: absolute;
-        top: 0;
-        left: 0;
-        transform: scaleY(0);
-        transition: .5s;
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
         z-index: -1;
-        transform-origin: bottom;
+        transition: .3s ease-in-out;
     }
 
-    /* modifiers */
+    &--fill:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: 2px solid $font;
+      }
+    
 
+    /* modifiers */
+    &--orange {
+        background-color: $primary;
+    }
+    &--shadow {
+        box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+    }
+    &--orange:hover {
+        background-color: $font;
+        color: $primary;
+        border-color: $font;
+    }
     /* this will work when parent is set to flex column*/
     &--align-right{
         align-self: flex-end;
