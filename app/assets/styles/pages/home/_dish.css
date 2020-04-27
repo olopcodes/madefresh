@@ -33,6 +33,10 @@
         height: 33rem;
         overflow: hidden;
         transition: .4s ease-in-out;
+
+        @mixin atXLarge {
+            height: 31.5rem;
+        }
     }
 
     &__box:hover {
@@ -71,11 +75,18 @@
         display: inline-block;
         font-size: 1.4rem;
         color: $primary;
+
+        @mixin atXLarge {
+            font-size: 1.8rem;
+        }
         
     }
 
     &__price {
         font-size: 1.4rem;
         display: inline-block;
+        @mixin atXLarge {
+            font-size: 1.8rem;
+        }
     }
 }

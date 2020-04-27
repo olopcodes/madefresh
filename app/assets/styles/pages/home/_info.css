@@ -104,6 +104,10 @@
             margin: 0 auto;
         }
 
+        @mixin atXLarge {
+            height: 50rem;
+        }
+
     }
 
     &__text {

@@ -79,6 +79,11 @@
             transform: translate(-30%,-45%);
             
         }
+
+        @mixin atXLarge {
+            width: 40rem;
+            height: 35rem;
+        }
     }
 
     &__right {
