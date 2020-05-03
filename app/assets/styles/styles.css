@@ -8,6 +8,7 @@
 @import 'modules/_site-nav';
 @import 'modules/_text';
 @import 'modules/_btn';
+@import 'modules/_footer';
 
 
 @import 'pages/home/_hero';
