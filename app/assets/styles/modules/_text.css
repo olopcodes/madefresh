@@ -99,6 +99,15 @@
         }
     }
 
+    &__link--white {
+        padding: 1.5rem 2rem;
+        color: $white;
+        display: inline-block;
+    }
+
+    &__link--white:hover {
+        color: $font;
+    }
 
     &__link::after, &__link::before {
         @mixin atLarge {

@@ -17,13 +17,13 @@
 }
 
 @define-mixin atXLarge {
-    @media (min-width:1200px) {
+    @media (min-width:1300px) {
         @mixin-content;
     }
 }
 
 @define-mixin atXXLarge {
-    @media (min-width:1500px) {
+    @media (min-width:1750px) {
         @mixin-content;
     }
 }

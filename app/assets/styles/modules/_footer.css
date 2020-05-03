@@ -1,0 +1,59 @@
+.footer {
+    background-color: $font-light;
+    color: $white;
+    padding-bottom: 3rem;
+    @mixin atLarge {
+        padding-top: 3rem;
+    }
+
+    &__wrapper {
+
+        @mixin atLarge {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 20rem;
+        }
+    }
+
+    &__logo {
+      
+        width: 20rem;
+        height: 10rem;
+        background: url('../../assets/imgs/logo-imgs/logo_transparent.png') no-repeat center;
+        background-size: cover;
+        margin-bottom: 2rem;
+        @mixin atLarge {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__logo-box {
+        margin-bottom: 2rem;
+        @mixin atLarge {
+            margin-bottom: 0;
+        }
+    }
+
+    &__links {
+        @mixin atLarge {
+            display: flex;            
+        }
+    }
+
+    &__socials {
+        display: flex;
+        margin: 2rem 0;
+
+        @mixin atLarge {
+            margin: 0;
+        }
+    }
+
+    &__copy {
+        @mixin atLarge {
+            margin-top: 10rem;
+        }
+    }
+}

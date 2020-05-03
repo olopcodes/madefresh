@@ -16,6 +16,14 @@
         height: 58rem;
     }
 
+    @mixin atXLarge {
+        height: 65rem;
+    }
+
+    @mixin atXXLarge {
+        height: 75rem;
+    }
+
     &__left {
         order: 2;
         position: relative;
@@ -29,6 +37,14 @@
         @mixin atLarge {
             order: 1;
             flex: 50%;
+        }
+
+        @mixin atXLarge {
+            height: 65rem;
+        }
+
+        @mixin atXXLarge {
+            height: 75rem;
         }
     }
 
@@ -104,6 +120,14 @@
             order: 2;
             flex: 40%;
             height: 50rem;
+        }
+
+        @mixin atXLarge {
+            height: 65rem;
+        }
+
+        @mixin atXXLarge {
+            height: 75rem;
         }
     }
 }

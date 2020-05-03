@@ -33,7 +33,6 @@
     &__form {
         margin-top: 3rem;
         height: 10rem;
-        border: 3px solid green;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
