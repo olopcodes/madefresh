@@ -1,0 +1,56 @@
+.story-hero {
+    height: 90vh;
+    background: url('../../assets/imgs/main/group-small.jpeg') no-repeat center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+    @mixin atMedium {
+        background: url('../../assets/imgs/main/group-med.jpeg') no-repeat center;
+        background-size: cover;
+        height: 95vh;
+    }
+
+    @mixin atLarge {
+        background: url('../../assets/imgs/main/group-large.jpeg') no-repeat center;
+        background-size: cover;
+    }
+
+    @mixin atXXLarge {
+        background: url('../../assets/imgs/main/group-xxlarge.jpeg') no-repeat center;
+        background-size: cover;
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 90vh;
+    }
+
+    &__text {
+        border: 5px solid $font;
+        @mixin centerAbs; 
+        top: 35%;
+        background-color: $primary-light;
+        height: 25rem;
+        width: 25rem;
+        border-radius: 50%;
+
+        @mixin atXLarge {
+            height: 30rem;
+            width: 30rem;
+        }
+
+        @mixin atXXLarge {
+            height: 33rem;
+            width: 33rem;
+        }
+        h1, p {
+            @mixin centerAbs; 
+        }
+
+        p {
+            top: 60%;
+            color: $white;
+        }
+    }
+
+}
