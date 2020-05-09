@@ -1,0 +1,103 @@
+.story-details {
+    padding-top: 2rem;
+    border: 3px solid magenta;
+
+    &__heading {
+        background-color: $font;
+        color: $white;
+        padding: 1.5rem 2rem;
+        margin: 0 auto;
+        width: 30rem;
+        text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+        box-shadow: 15px 10px 12px 0px rgba(0,0,0,0.31);
+        transform: skewX(-15deg);
+
+        @mixin atLarge {
+            width: 35rem;
+        }
+
+        @mixin atLarge {
+            width: 42rem;
+        }
+    }
+
+    &__wrapper {
+        border: 3px solid lime;
+        margin-top: 4rem;
+
+        @mixin atLarge {
+            display: grid;
+            grid-template-rows: 55rem 55rem;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__imgs-box, &__more-imgs {
+        position: relative;
+    }
+
+    &__img, &__more-img {
+        @mixin atSmall {
+            height: 35rem;
+            width: 35rem;
+            margin: 0 auto 2rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__img-1 {
+
+    }
+
+    &__img-2 {
+
+    }
+
+    &__text, &__more-text {
+        border: 3px solid darkturquoise;
+
+        @mixin atSmall {
+            width: 35rem;
+            margin: auto;            
+        }
+
+    }
+
+    &__description {
+        text-indent: 2rem;
+        padding: 1rem;
+
+        @mixin atSmall {
+            padding: 1.5rem;
+        }
+    }
+
+    &__more-imgs {
+
+    }
+
+    &__more-img {
+
+    }
+
+    &__more-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            display: inline-block;
+            
+        }
+
+        @mixin atLarge {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+
+}
