@@ -71,7 +71,7 @@
     }
 
     &__text, &__more-text {
-        
+        margin: 2rem 0;
 
         @mixin atSmall {
             width: 35rem;
@@ -103,9 +103,11 @@
     }
 
     &__more-img-2 {
-        position: absolute;
-        top: 0;
-        left: 5rem;
+        @mixin atLarge {
+            position: absolute;
+            top: 0;
+            left: 5rem;   
+        }
     }
 
     &__more-text {

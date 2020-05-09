@@ -73,6 +73,18 @@
         color: $white;
     }
 
+    &--green {
+        color: green;
+    }
+
+    &--lime {
+        color: lime;
+    }
+
+    &--blue-light{
+        color: $font-light;
+    }
+
     &--small {
         font-size: 1.15rem;
 

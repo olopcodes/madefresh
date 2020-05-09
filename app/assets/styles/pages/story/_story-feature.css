@@ -1,0 +1,77 @@
+.story-feature {
+    
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+    background-color: $primary-light;
+    padding-bottom: 5rem;
+    height: 50rem;
+    @mixin atLarge {
+        display: flex;
+        align-items: center;
+    }
+
+    @mixin atXLarge {
+        height: 40rem;
+        clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+    }
+
+    &__wrapper {
+        
+        @mixin atLarge {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 10rem;
+        }
+        
+        h2 {
+            text-align: center;
+
+            @mixin atLarge {
+                font-size: 3rem;
+                padding-right: 1.5rem;
+                border-right: 3px solid $font;
+            }
+        }        
+    }
+
+    &__features {
+       
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @mixin atLarge {
+            flex-direction: row;
+            height: 10rem;
+            justify-content: space-evenly;
+            width: 75rem;
+        }
+
+        @mixin atXLarge {
+            width: 80rem;
+        }
+
+
+        p {
+            font-size: 2rem;
+            transition: all .3s;
+            background-color: $primary-light;
+            padding: 1rem 1.5rem;                
+
+            @mixin atLarge {
+                padding: .5rem .8rem;                
+            }
+
+            @mixin atXLarge {
+                padding: .8rem 1.2rem;                
+            }
+        }
+
+        p:hover {
+            box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+            transform: scale(1.1) skew(2deg, 2deg);
+        }
+    }
+}
